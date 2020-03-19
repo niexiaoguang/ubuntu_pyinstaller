@@ -1,0 +1,9 @@
+raw build:
+
+docker build -t py_alpine_3.7 --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) .
+
+
+raw run :
+
+docker run --rm -u $(id -u):$(id -g) -it --expose 1883 --expose 5671 py_alpine_3.7
+docker run --rm -u $(id -u):$(id -g) --expose 1883 --expose 5671 py_alpine_3.7
