@@ -28,13 +28,6 @@ RUN pip3 install -r /requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ 
 COPY src/ /app
 WORKDIR /app
 
-# install lib for blender
-RUN apt-get install -y libtbb2 \
-                    #  libtbb-dev \
-                     libjemalloc-dev \
-                     libfftw3-3 \
-                     
-
 
 # Create a user group 
 # RUN addgroup $GROUP_ID
